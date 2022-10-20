@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于CTFhub技能树Web之信息泄露（二） | Qwerty-61 · Blog</title><meta name="keywords" content="博客，Qwerty-61，Qwerty"><meta name="author" content="Qwerty-61"><meta name="copyright" content="Qwerty-61"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Web之信息泄露 噗哈哈哈哈哈哈哈哈哈\(^o^)&#x2F;~  目录遍历   PHPINFO   备份文件下载   Git泄露   SVN泄露   HG泄露">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于CTFhub技能树Web之信息泄露（二） | Qwerty-61 · Blog</title><meta name="keywords" content="博客，Qwerty-61，Qwerty"><meta name="author" content="Qwerty-61"><meta name="copyright" content="Qwerty-61"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Web之信息泄露 噗哈哈哈哈哈哈哈哈哈\(^o^)&#x2F;~  目录遍历  访问靶机，有个“点击开始寻找flag”，先F12一下，没看出来啥，so点击“点击开始寻找flag”，如图：根据提示，可以看出是apache的目录遍历emmm那就一个一个挨着点，最后在这里看到了flag.txt（看到说是可以编写脚本来自动遍历目录，不会，就先这样罢，，，&#x3D;_&#x3D;)点击，拿到flag.  PHPINFO  打开靶机，如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于CTFhub技能树Web之信息泄露（二）">
 <meta property="og:url" content="https://qwerty-61.github.io/posts/43a5bf47.html">
 <meta property="og:site_name" content="Qwerty-61 · Blog">
-<meta property="og:description" content="Web之信息泄露 噗哈哈哈哈哈哈哈哈哈\(^o^)&#x2F;~  目录遍历   PHPINFO   备份文件下载   Git泄露   SVN泄露   HG泄露">
+<meta property="og:description" content="Web之信息泄露 噗哈哈哈哈哈哈哈哈哈\(^o^)&#x2F;~  目录遍历  访问靶机，有个“点击开始寻找flag”，先F12一下，没看出来啥，so点击“点击开始寻找flag”，如图：根据提示，可以看出是apache的目录遍历emmm那就一个一个挨着点，最后在这里看到了flag.txt（看到说是可以编写脚本来自动遍历目录，不会，就先这样罢，，，&#x3D;_&#x3D;)点击，拿到flag.  PHPINFO  打开靶机，如">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://png.eot.ooo/i/2022/10/12/6346dfe196cd6.jpg">
 <meta property="article:published_time" content="2022-10-17T10:11:00.000Z">
-<meta property="article:modified_time" content="2022-10-17T10:25:27.270Z">
+<meta property="article:modified_time" content="2022-10-20T10:01:03.827Z">
 <meta property="article:author" content="Qwerty-61">
 <meta property="article:tag" content="博客，Qwerty-61，Qwerty">
 <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-10-17 18:25:27'
+  postUpdate: '2022-10-20 18:01:03'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -143,13 +143,43 @@
     }
     detectApple()
     })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Qwerty-61 · Blog" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%A4%8D%E7%89%A9.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> hh</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Qwerty-61 · Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> hh</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">关于CTFhub技能树Web之信息泄露（二）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-17T10:11:00.000Z" title="发表于 2022-10-17 18:11:00">2022-10-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-17T10:25:27.270Z" title="更新于 2022-10-17 18:25:27">2022-10-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于CTFhub技能树Web之信息泄露（二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><span class='p center logo large'>Web之信息泄露</span>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/%E6%A4%8D%E7%89%A9.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> hh</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Qwerty-61 · Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> hh</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">关于CTFhub技能树Web之信息泄露（二）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-17T10:11:00.000Z" title="发表于 2022-10-17 18:11:00">2022-10-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-20T10:01:03.827Z" title="更新于 2022-10-20 18:01:03">2022-10-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于CTFhub技能树Web之信息泄露（二）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><span class='p center logo large'>Web之信息泄露</span>
 <span class='p center small'>噗哈哈哈哈哈哈哈哈哈\(^o^)/~</span>
 <div class="tip success"><p><1> 目录遍历</p>
 </div>
+<p>访问靶机，有个“点击开始寻找flag”，先F12一下，没看出来啥，so点击“点击开始寻找flag”，如图：<br>根据提示，可以看出是apache的目录遍历<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63510b0908872.png" style="width: 160;height: 60,;"/></div></div><br>emmm那就一个一个挨着点，最后在这里看到了flag.txt<br>（看到说是可以编写脚本来自动遍历目录，不会，就先这样罢，，，=_=)<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63510c358c3ae.png" style="width: 160;height: 60,;"/></div></div><br>点击，拿到flag.<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63510c50342d5.png" style="width: 160;height: 60,;"/></div></div></p>
 <div class="tip success"><p><2> PHPINFO</p>
 </div>
+<p>打开靶机，如图<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63510f7be89b7.png" style="width: 160;height: 60,;"/></div></div><br>额还是这样的界面，直接点开<br>往下翻（直接ctrl+f)搜索flag，找到如图位置处，<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63510f8d2cacc.png" style="width: 160;height: 60,;"/></div></div><br>提交flag，成功。</p>
 <div class="tip success"><p><3> 备份文件下载</p>
+</div>
+<div class="note success modern"><p>success 1）网站源码</p>
+</div>
+<p>点开，如图<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/6351149b93018.png" style="width: 160;height: 60,;"/></div></div><br>查看提示：<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/635114a729859.jpg" style="width: 160;height: 60,;"/></div></div><br>可以根据提示中告诉我们的网站的备份文件名和后缀名查找，都试一遍，发现www.zip中有三个文件，其中一个名字是flag_190925660.txt,。<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/635114b16500f.png" style="width: 160;height: 60,;"/></div></div><br>点开那个文件里面没有flag，于是把它加到url后面，出来flag页面<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/635114bae5ff3.png" style="width: 160;height: 60,;"/></div></div><br>提交flag，成功。</p>
+<p>ps:见到有人使用python脚本扫描，</p>
+<pre><code>import requests
+if __name__ == &#39;__main__&#39;:
+    # url为被扫描地址，后不加‘/’
+    url1 = &#39;http://challenge-3c36914916e0b990.sandbox.ctfhub.com:10800&#39;        
+
+    # 常见的网站源码备份文件名
+    list1 = [&#39;web&#39;, &#39;website&#39;, &#39;backup&#39;, &#39;back&#39;, &#39;www&#39;, &#39;wwwroot&#39;, &#39;temp&#39;]
+    # 常见的网站源码备份文件后缀
+    list2 = [&#39;tar&#39;, &#39;tar.gz&#39;, &#39;zip&#39;, &#39;rar&#39;]
+
+    for i in list1:
+        for j in list2:
+            back = str(i) + &#39;.&#39; + str(j)
+            url = str(url1) + &#39;/&#39; + back
+            print(back + &#39;    &#39;, end=&#39;&#39;)
+            print(requests.get(url).status_code)
+</code></pre><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/635117fdf0d5c.jpg" style="width: 160;height: 60,;"/></div></div>
+<div class="note success modern"><p>success 2)bak文件</p>
+</div>
+<p>打开靶机，如图所示：<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63511b4ace295.png" style="width: 160;height: 60,;"/></div></div><br>说是，flag在index.php中。<br>那我们就在url后面加上/index.php.bak<br>下载下来，记事本打开，看到了flag ^_^<br><div class="img-wrap"><div class="img-bg"><img class="img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="http://png.eot.ooo/i/2022/10/20/63511b4cd2d0e.png" style="width: 160;height: 60,;"/></div></div><br>提交，成功。</p>
+<div class="note success modern"><p>success 3）vim缓存</p>
+</div>
+<div class="note success modern"><p>success 4）.DS_Store</p>
 </div>
 <div class="tip success"><p><4> Git泄露</p>
 </div>
